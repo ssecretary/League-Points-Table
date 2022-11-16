@@ -63,7 +63,6 @@ const getCurrentUser = (req, res, next) => {
 
 // METHOD TO LOGIN
 const login = (req, res, next) => {
-  console.log(req.body);
   const { username, password } = req.body;
 
   if (!(username && password)) {

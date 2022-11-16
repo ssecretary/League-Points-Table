@@ -9,7 +9,6 @@ function Login() {
   const [username, setUsername] = useState("");
   const [passwsord, setPassword] = useState("");
   useEffect(() => {
-    console.log(window.location.href);
     console.log(window.location.pathname.split("/")[1]);
     if (window.location.pathname.split("/")[1] === "register") {
       setPathName("Registration");
@@ -19,17 +18,14 @@ function Login() {
   }, []);
 
   const onUsernameChange = (e) => {
-    console.log(e.target.value);
     setUsername(e.target.value);
   };
 
   const onPasswordChange = (e) => {
-    console.log(e.target.value);
     setPassword(e.target.value);
   };
 
   const onSubmitClick = () => {
-    console.log("submit click");
     var url = "";
     var payload = { username: username, password: passwsord };
     if (pathName === "Login") {
@@ -49,16 +45,14 @@ function Login() {
       if (res.ok) {
         res.json().then((val) => {
           console.log(val.info);
+          message.success("User login successfully")
         });
         navigate("/league");
       } else {
-        if (res.status === 400) {
-          message.error("User alredy exists");
-        } else if (res.status === 401) {
-          message.error("Both fields is required");
-        }
+        
         res.json().then((err) => {
           console.log(err);
+          message.error(err.error)
         });
       }
     });
@@ -66,9 +60,9 @@ function Login() {
 
   return (
     <div>
-      <div className="row form-box">
+      <div className="row form-box" style={{display:"flex", justifyContent:"center", textAlign:"center"}}>
         {/* <legend className="form-legend">Generate Barcode</legend> */}
-        <Card title={pathName}>
+        <Card title={pathName} style={{width:"80%"}}>
           <br />
           <br />
           <Form.Item
