@@ -1,19 +1,35 @@
-# League-Points-Table
+# League Points Table
 
-League points table is an application in which user habe to login or register first than after successfully login or registration user will have to add teamns along with their points and can also see points table.
+The **League Points Table** is an application where users can log in or register, add teams with their respective points, and view the league table sorted by points in descending order. This application is built using Node.js for the backend and React for the frontend, with MongoDB used as the database.
 
-Steps to use this repo.
+## 📝 Features
 
-1. Clone this repo which containstwo folder one for backend running on node and other for frontend running on react.
+- **User Authentication**: Users can log in or register to access the application.
+- **Add Teams**: After login, users can add teams along with their corresponding points to the league table.
+- **View League Table**: The application displays a points table with teams listed in descending order based on their points.
+- **MongoDB Integration**: The app stores all team and user data in a local MongoDB database.
 
-2. After clonning go to backend folder and type npm install to install all packages used to run backend. After that type npm start to start running backend. 
+## 📂 Project Structure
 
-3. Same way go to frontend folder and type npm install to install all frontend packages to run frontend. After that type npm start to start running frontned.
+This project consists of two main parts:
 
-4. After successfully running of both backend and frontend user will able to see login page in which user can login or register itself.
+1. **Backend (Node.js)**: Handles user authentication, team management, and database interactions.
+2. **Frontend (React)**: Displays the UI for login, registration, adding teams, and viewing the points table.
 
-5. After successfull loggin or register user will redirect to league page where user will find four inputs for entering team name and corresponding points.
+## ⚙️ Prerequisites
 
-6. On the same league page user will see a (button get all team) to get list of all teams in descending order of points.
+Before you begin, make sure you have the following installed:
 
-7. Before running make sure you have mongodb in ypur system as these application is running on mongodb database on local machine
+- **Node.js** and **npm** (Node Package Manager) – [Install Node.js](https://nodejs.org/)
+- **MongoDB** – Local MongoDB server (Make sure it’s running on your machine). You can install MongoDB from [here](https://www.mongodb.com/try/download/community).
+
+## 🚀 Steps to Use
+
+Follow these steps to get the application up and running on your local machine:
+
+### 1. Clone the Repository
+
+Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/your-username/League-Points-Table.git
